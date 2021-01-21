@@ -1,0 +1,497 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* PAGE COLORS */
+:root {
+  --mainColor1: #0e49b5;
+  --mainColor2: #111d5e;
+  --mainColor3: #070d59;
+  --hoverColor1: #fd3a69;
+}
+
+/* GENERAL */
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  overflow: hidden;
+  width: 90%;
+  max-width: 1190px;
+  margin: auto;
+}
+
+/* NABAR FOR PAGES */
+header {
+  width: 90%;
+  margin-left: 15px;
+  margin-right: 25px;
+}
+
+.nav-wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  width: 140px;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 4%;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* DONATE-FORM */
+.donate-form {
+  font-size: 1.4rem;
+  background: linear-gradient(
+    280deg,
+    var(--mainColor1),
+    var(--mainColor2),
+    var(--mainColor3)
+  );
+  border: 1px solid #fff;
+  border-radius: 5px;
+  outline: none;
+}
+.donate-form a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  padding: 9px;
+}
+.donate-form:hover {
+  background: var(--hoverColor1);
+  transform: scale(0.9);
+}
+
+/* DOTS WRAPPER  */
+.dot-wrapper {
+  margin-right: 0%;
+  transition: transform 0.5s ease-in;
+}
+
+.dot1 {
+  width: 27px;
+  height: 4px;
+  background: linear-gradient(
+    280deg,
+    var(--mainColor1),
+    var(--mainColor2),
+    var(--mainColor3)
+  );
+  margin-bottom: 2px;
+}
+.dot2 {
+  width: 27px;
+  height: 4px;
+  background: linear-gradient(
+    280deg,
+    var(--mainColor1),
+    var(--mainColor2),
+    var(--mainColor3)
+  );
+  margin-bottom: 2px;
+  transition: transform 0.5s ease-in;
+}
+.dot3 {
+  width: 27px;
+  height: 4px;
+  background: linear-gradient(
+    280deg,
+    var(--mainColor1),
+    var(--mainColor2),
+    var(--mainColor3)
+  );
+  transition: transform 0.5s ease-in;
+}
+/* DOTS-ACTIVE */
+.dot1-active {
+  transform: rotate(45deg) translate(7.5px, 5px);
+  transition: transform 0.5s ease;
+}
+.dot2-active {
+  display: none;
+  transition: transform 0.5s ease-in;
+}
+.dot3-active {
+  transform: rotate(-45deg) translate(-2px, 3px);
+  transition: transform 0.5s ease-in;
+}
+/* MENU-WRAPPER */
+.menu-wrapper {
+  transition: transform 0.5s ease-in-out;
+}
+.menu-wrapper ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+    280deg,
+    var(--mainColor1),
+    var(--mainColor2),
+    var(--mainColor3)
+  );
+  width: 180px;
+  height: 340px;
+  font-size: 1.3rem;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu-wrapper {
+  position: absolute;
+  right: 0;
+  transform: translate(-2%, -160%);
+  z-index: 100;
+}
+
+.menu-wrapper-active1 {
+  transform: translate(-1%, -5px);
+}
+
+.menu-wrapper ul a:hover {
+  color: var(--hoverColor1);
+}
+.menu-wrapper ul a {
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-bottom: 10px;
+  border-bottom: 1.2px solid #fff;
+  padding: 7px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* SLIDE-SHOW -IMAGE */
+
+.slide-show {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.slide-wrapper {
+  width: 100%;
+  background-image: url("images/don1.png");
+  height: 690px;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.slide-show img {
+  width: 100%;
+  height: 510px;
+  flex: 1;
+  filter: brightness(80%);
+  position: relative;
+  margin: auto;
+}
+
+/* ARROWS */
+
+.right-arrow {
+  position: absolute;
+  right: 80px;
+  bottom: 240px;
+}
+.left-arrow {
+  position: absolute;
+  left: 80px;
+  bottom: 240px;
+}
+
+.right-arrow i,
+.left-arrow i {
+  color: #fff;
+}
+.right-arrow i:hover,
+.left-arrow i:hover {
+  color: var(--hoverColor1);
+}
+
+/* DONATE-TEXT */
+.donate-text {
+  position: absolute;
+  bottom: 20px;
+  padding-bottom: 40px;
+  color: #fff;
+  background: transparent;
+  z-index: 12;
+  width: 420px;
+  height: 190px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  line-height: 1.3;
+}
+
+.donate-text a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 1.1rem;
+}
+
+.donate-text button {
+  background: linear-gradient(
+    280deg,
+    var(--mainColor1),
+    var(--mainColor2),
+    var(--mainColor3)
+  );
+  display: block;
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  border: 1px #fff;
+  margin: auto;
+  position: relative;
+  top: 10px;
+  left: 0px;
+  margin-top: 15px;
+}
+
+.donate-text button:hover {
+  transform: scale(0.85);
+}
+.donate-text button a:hover {
+  color: var(--hoverColor1);
+}
+
+.donate-text h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.donate-text p {
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+/* WHY US */
+.why-container {
+  padding-top: 50px;
+  overflow-y: hidden;
+  margin: auto;
+  position: relative;
+}
+
+.why-container h1 {
+  text-align: center;
+}
+
+.why-wrapper-container {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 10px;
+  margin: 20px;
+}
+.why-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+}
+.why1:hover,
+.why2:hover,
+.why3:hover,
+.why4:hover {
+  transform: translateY(-15px);
+}
+
+.why-wrapper-container h2 {
+  padding-top: 10px;
+  text-align: left;
+}
+.why-wrapper-container i {
+  margin-left: 30px;
+}
+.why-color {
+  background: linear-gradient(
+    280deg,
+    var(--mainColor1),
+    var(--mainColor2),
+    var(--mainColor3)
+  );
+
+  height: 250px;
+  padding: 70px;
+  color: #fff;
+}
+
+.why-color P {
+  font-size: 1.1rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.why-color::after,
+.why-color::before {
+  content: "";
+  background: #fff;
+  height: 45px;
+  position: absolute;
+
+  margin: auto;
+  top: 300px;
+  left: 0px;
+  right: 0px;
+
+  transform: skewY(-3deg);
+}
+
+/* AT MEDIA QUERY */
+
+/* BIG TABLET */
+@media (max-width: 1130px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* DESIGN -AFTER */
+  .why-color::after,
+  .why-color::before {
+    top: 297px;
+    transform: skewY(-3deg);
+  }
+
+  /* DOT-WRAPPER */
+  .dot-wrapper {
+    margin-right: -5px;
+    transition: transform 0.5s ease-in;
+  }
+
+  /* LOGO */
+  .logo {
+    width: 140px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: -15px;
+  }
+}
+/* MINI TABLET */
+@media (max-width: 760px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+/* MOBILE */
+@media (max-width: 580px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* DONATE-TEXT */
+  .donate-text {
+    z-index: 12;
+    width: 300px;
+    height: 200px;
+    padding: 9px;
+    line-height: 1.2;
+  }
+
+  /* WHY COLOR */
+  .why-color {
+    height: 270px;
+    padding: 40px 30px;
+    color: #fff;
+  }
+
+  .why-color P {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  /* ARROWS */
+  .right-arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 300px;
+  }
+  .left-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 300px;
+  }
+  /* DESIGN -AFTER */
+  .why-color::after,
+  .why-color::before {
+    top: 328px;
+    transform: skewY(-4.2deg);
+  }
+
+  /* IMAGE-SHOW */
+  .slide-show {
+    margin-top: 0;
+    padding-top: 0;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+  .slide-wrapper {
+    background-size: contain;
+    margin-top: 0;
+    padding-top: 0;
+    transform: translateY(-90px);
+    width: 100%;
+    height: 700px;
+  }
+
+  .slide-show img {
+    height: 300px;
+  }
+
+  .donate-text {
+    width: 100%;
+    color: black;
+    margin-top: 20px;
+    padding-top: 30px;
+    height: 250px;
+  }
+
+  .donate-text h1 {
+    text-align: left;
+  }
+}
+
+/* MINI-PHONE LIKE BLACKBERRY/GALAXY S5 */
+@media (max-width: 550px) {
+  /* WHY COLOR */
+
+  .why-color {
+    padding: 40px 25px;
+  }
+}
