@@ -198,7 +198,6 @@ nav {
   background-image: url("images/don1.png");
   height: 690px;
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -412,6 +411,10 @@ nav {
   body {
     overflow-x: hidden;
   }
+  /* HEADER */
+  header {
+    margin-top: 20px;
+  }
 
   /* DONATE-TEXT */
   .donate-text {
@@ -446,6 +449,7 @@ nav {
     left: 20px;
     bottom: 300px;
   }
+
   /* DESIGN -AFTER */
   .why-color::after,
   .why-color::before {
